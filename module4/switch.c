@@ -43,9 +43,10 @@ int main()
 
             printf("Bronze Medal\n");
             break;
+        case 24:
         case 14:
 
-            r
+        
             printf("plastic Medal\n");
             break;
         default: //else
