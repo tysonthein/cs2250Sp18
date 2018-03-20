@@ -20,16 +20,22 @@ typedef struct SuperDude
 {
     int age;
     double weight;
+    char sex;
 }SuperDude;
 
 struct dude
 {
     int age;
     double weight;
+    char sex;
 };
 // Function Prototypes
-void ShowInfo(int age, double weight);
-void ShowInfoStruct(SuperDude sd);
+void ShowInfo(int age, double weight, char sex);
+//pass a const address instead of the value
+void ShowInfoStruct(const SuperDude* sd);
+void InitInfoStruct(SuperDude* sd); //address of superdude type
+
+
 // Main Function
 #endif /* ----- #ifndef DUDE__INC__ ----- */
 
