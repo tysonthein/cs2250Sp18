@@ -37,8 +37,10 @@ int main()
     printf("Enter arrow base width:\n");
     scanf("%d", &arrowBaseWidth);
 
-    printf("Enter arrow head width\n");
+    printf("Enter arrow head width:\n");
     scanf("%d", &arrowHeadWidth);
+    printf("\n");
+
 
     while(arrowHeadWidth <= arrowBaseWidth){
         printf("please choose a arrow head width that is larger than the base");
@@ -55,7 +57,12 @@ for(y = 0; y <= arrowHeadWidth; arrowHeadWidth--){
     for(w = 1; w <= arrowHeadWidth; w++){
         printf("%c", star);
     }   
-        printf("\n");
+       if(y<arrowHeadWidth){
+           printf("\n");
+       }
+       else{
+        break;
+       }
  }
 
 

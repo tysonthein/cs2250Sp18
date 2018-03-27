@@ -41,3 +41,13 @@ void InitInfoStruct(SuperDude* sd)
     (*sd).sex = 'N'; // alternative way of updating the values the address points to.
     return;
 }
+SuperDude CopyInfoStruct(const SuperDude* sd)
+{
+    SuperDude tmp;
+
+    tmp.age = sd->age;
+    tmp.weight = sd->weight;
+    tmp.sex = sd->sex;
+
+    return tmp;
+}

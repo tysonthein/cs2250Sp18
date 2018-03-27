@@ -25,28 +25,29 @@ const int MAXUSER = 5;
 int main()
 {
 double weight[MAXUSER];
-double totWeight = 0;
 double avgWeight = 0;
 double maxWeight = 0;
 int i;
-
+int j;
+double Sum = 0;
+maxWeight = weight[0];
 for(i = 1; i <= MAXUSER; i++){
     printf("Enter weight %d:", i);
     scanf("%lf", &weight[i-1]);
-}
-    
-    printf("You entered: %lf %lf %lf %lf %lf\n", weight[0], weight[1], weight[2], weight[3], weight[4]);
-    totWeight = weight[0] + weight[1] + weight[2] + weight[3] + weight[4];
-    avgWeight = (weight[0] + weight[1] + weight[2] + weight[3] + weight[4])/5;
-    maxWeight = weight[0];
-
-    for(i = 0; i < MAXUSER; i++){
-        if(weight[i] > maxWeight){
+    Sum += weight[i-1];
+    j = i;
+    for(j = i; j <= MAXUSER; j++){
+    if(weight[j] > maxWeight){
             maxWeight = weight[i];
         }
     }
-    
-    printf("Total weight: %lf\n", totWeight);
+
+}
+printf("You entered: %lf %lf %lf %lf %lf\n", weight[0], weight[1], weight[2], weight[3], weight[4]);
+
+    avgWeight = Sum / 5;
+
+    printf("Total weight: %lf\n", Sum);
     printf("Average weight: %lf\n", avgWeight);
     printf("Max weight: %lf\n", maxWeight);
 

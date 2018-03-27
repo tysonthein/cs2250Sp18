@@ -17,12 +17,9 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include "superlib.h"
+#include "superlib.c"
 
-// Constants
-const int INPUT_STR_SIZE = 50; // input string size
-// Function Prototypes
-void StrSpaceToHyphen(char modString[]);
-// Main Function
 int main()
 {
     char userStr[INPUT_STR_SIZE];
@@ -37,17 +34,6 @@ int main()
     return 0;
 }
 // Function Definitions
-void StrSpaceToHyphen(char modString[])
-{
-    int i = 0; //loop index
-    for(i = 0; i < strlen(modString); ++i)
-    {
-        if(modString[i] == ' ')
-        {
-            modString[i] = '-';
-        }
 
-    }
-return;
-}
+    
 

@@ -34,7 +34,7 @@ void ShowInfo(int age, double weight, char sex);
 //pass a const address instead of the value
 void ShowInfoStruct(const SuperDude* sd);
 void InitInfoStruct(SuperDude* sd); //address of superdude type
-
+SuperDude CopyInfoStruct(const SuperDude* sd);
 
 // Main Function
 #endif /* ----- #ifndef DUDE__INC__ ----- */
