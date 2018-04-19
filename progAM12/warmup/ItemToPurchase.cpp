@@ -19,6 +19,7 @@
 #include <iostream> // for C++
 using namespace std; // for C++
 #include "ItemToPurchase.h"
+//#include <vector>
 // Constants
 
 // Function Prototypes
@@ -26,44 +27,91 @@ using namespace std; // for C++
 // Main Function
 //
 // Function Definitions
-class ItemToPurchase_Item
-{
+/*class ItemToPurchase {
 Public: 
-    void SetName(char ItemName);
-    char GetName();
-    void SetPrice(double ItemPrice);
+    ItemToPurchase();
+    void SetName(string setName);
+    string GetName()const;
+    
+    void SetDescription(string setDescription);
+    string GetDescription()const;
+
+    void SetPrice(int setPrice);
     double GetPrice();
-    void SetQuantity(int ItemQuantity);
+
+    void SetQuantity(int setQuantity);
     int GetQuantity();
 
 private: 
-    char name[50] = "none";
-    double price = 0;
+    string name[50] = "none";
+    string description[50] = "none";
+    int price = 0;
     int quantity = 0;
 };
+*/
 
-void ItemToPurchase::SetName(char ItemName){
-    while(i = 0; i < 10; i++){
-        Item.name[i]=ItemName[i];
-    }
+ItemToPurchase::ItemToPurchase()
+{   name = "none";
+    description = "none";
+    price = 0;
+    quantity = 0;
 }
 
-char ItemToPurchase::GetName(){
-return name;
+ItemToPurchase::ItemToPurchase(string setName, string setDescription, int setPrice, int setQuantity){
+    name = setName;
+    description = setDescription;
+    price = setPrice;
+    quantity = setQuantity;
 }
 
-void ItemToPurchase::SetPrice(double ItemPrice){
-   Item.price = ItemPrice;
+void ItemToPurchase::SetName(){
+    cout << "Enter the item name:" << endl;
+    cin >> name;
 }
 
-double ItemToPurchase::GetPrice(){
-return price;
+void ItemToPurchase::GetName(){
+    cout << "Name: " << name << endl;
 }
 
-void ItemToPurchase::SetQuantity(int ItemQuantity){
-   Item.quantity = ItemQuantity;
+void ItemToPurchase::SetPrice(){
+    cout << "Enter the item price:" << endl;
+    cin >> price;
 }
 
-int ItemToPurchase::GetQuantity(){
-return quantity;
+void ItemToPurchase::GetPrice(){
+    cout << "Price: " << price << endl;
 }
+
+void ItemToPurchase::SetQuantity(){
+    cout << "Enter the item quantity:" << endl;
+    cin >> quantity;
+}
+
+void ItemToPurchase::GetQuantity(){
+    cout << "Quantity: " << quantity << endl;
+}
+
+void ItemToPurchase::SetDescription(){
+    cout << "Enter the item Description:" << endl;
+    //getline(cin,description);
+}
+
+void ItemToPurchase::GetDescription(){
+    cout << "Description: " << description << endl;
+}
+
+int ItemToPurchase::PrintItemCost(){
+    int cost1 = 0;
+    cost1 = price;
+    int q1 = 0;
+    q1 = quantity;
+    int tot = 0;
+    tot = cost1 * q1;
+   // cout << "TOTAL COST" << endl;
+    cout << name << " " << quantity << " " << "@ $" << price << endl;
+   // cout << endl;
+   // cout << "Total: $" << tot << endl;
+    return tot;
+}
+
+

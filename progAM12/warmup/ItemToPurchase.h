@@ -17,41 +17,49 @@
  */
 #ifndef  ITEMTOPURCHASE__INC__
 #define  ITEMTOPURCHASE_INC__
-
 #include <string>
-using namespace std;
 
 class ItemToPurchase
 {
 public:
     ItemToPurchase();
-    ItemToPurchase(string name, string description, int price, int quantity = 1);
+    ItemToPurchase(std::string getName, std::string setDescription, int setPrice, int setQuantity);
 
-    void SetName(string name);
-    void SetDescription(String description);
-    void SetPrice(int price);
-    void SetQuantity(int quantity);
+    void SetName();
+    void SetDescription();
+    void SetPrice();
+    void SetQuantity();
 
-    string GetName() const;
-    string GetDescription() const;
-    int GetPrice() const;
-    int GetQuantity() const;
+    void GetName();
+    void GetDescription();
+    void GetPrice();
+    void GetQuantity();
 
-    void PrintItemCost();
-    void PrintItemDescription();
+    int PrintItemCost();
+    //void PrintItemDescription();
 
 private:
-    string itemName;
-    string itemDescription;
-    int itemPrice;
-    int itemQuantity;
+    std::string name;
+    std::string description;
+    int price;
+    int quantity;
 
 };
+//void PrintItemCost();
+/*
+ItemToPurchase::ItemToPurchase();
+ItemToPurchase::ItemToPurchase(string name, string description, int price, int quantity);
 
+void ItemToPurchase::SetName(string name);
+void ItemToPurchase::SetDescription(string description);
+void ItemToPurchase::SetPrice(int price);
+void ItemToPurchase::SetQuantity(int quantity);
 
-
-
-
+void ItemToPurchase::GetName();
+void ItemToPurchase::GetDescription();
+void ItemToPurchase::GetPrice();
+void ItemToPurchase::GetQuantity();
+*/
 
 #endif /* ----- #ifndef ITEMTOPURCHASE__INC__ ----- */
 
