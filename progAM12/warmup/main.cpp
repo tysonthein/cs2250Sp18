@@ -32,22 +32,22 @@ int main()
     int total = 0;
     ItemToPurchase Item1("sock","balls",2,1);
     cout << "item 1" << endl;
-    Item1.SetName();
+    Item1.SetName("balls");
     Item1.GetName();
-    Item1.SetPrice();
+    Item1.SetPrice(5);
     Item1.GetPrice();
-    Item1.SetQuantity();
+    Item1.SetQuantity(10);
     Item1.GetQuantity();
     cout << endl;
     cin.ignore();
 
     ItemToPurchase Item2("", "", 2, 1);
     cout << "item 2" << endl;
-    Item2.SetName();
+    Item2.SetName("trash");
     Item2.GetName();
-    Item2.SetPrice();
+    Item2.SetPrice(2);
     Item2.GetPrice();
-    Item2.SetQuantity();
+    Item2.SetQuantity(4);
     Item2.GetQuantity();
     cout << endl;
     cin.ignore();

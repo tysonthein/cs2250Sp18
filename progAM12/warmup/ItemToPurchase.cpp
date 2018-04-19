@@ -64,34 +64,37 @@ ItemToPurchase::ItemToPurchase(string setName, string setDescription, int setPri
     quantity = setQuantity;
 }
 
-void ItemToPurchase::SetName(){
+void ItemToPurchase::SetName(string a){
     cout << "Enter the item name:" << endl;
     cin >> name;
 }
 
-void ItemToPurchase::GetName(){
+string ItemToPurchase::GetName(){
     cout << "Name: " << name << endl;
+    return name;
 }
 
-void ItemToPurchase::SetPrice(){
+void ItemToPurchase::SetPrice(int a){
     cout << "Enter the item price:" << endl;
     cin >> price;
 }
 
-void ItemToPurchase::GetPrice(){
+int ItemToPurchase::GetPrice(){
     cout << "Price: " << price << endl;
+    return price;
 }
 
-void ItemToPurchase::SetQuantity(){
+void ItemToPurchase::SetQuantity(int b){
     cout << "Enter the item quantity:" << endl;
     cin >> quantity;
 }
 
-void ItemToPurchase::GetQuantity(){
+int ItemToPurchase::GetQuantity(){
     cout << "Quantity: " << quantity << endl;
+    return quantity;
 }
 
-void ItemToPurchase::SetDescription(){
+void ItemToPurchase::SetDescription(string b){
     cout << "Enter the item Description:" << endl;
     //getline(cin,description);
 }

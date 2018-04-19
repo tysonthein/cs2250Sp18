@@ -25,15 +25,15 @@ public:
     ItemToPurchase();
     ItemToPurchase(std::string getName, std::string setDescription, int setPrice, int setQuantity);
 
-    void SetName();
-    void SetDescription();
-    void SetPrice();
-    void SetQuantity();
+    void SetName(std::string a);
+    void SetDescription(std::string b);
+    void SetPrice(int a);
+    void SetQuantity(int b);
 
-    void GetName();
+    std::string GetName();
     void GetDescription();
-    void GetPrice();
-    void GetQuantity();
+    int GetPrice();
+    int GetQuantity();
 
     int PrintItemCost();
     //void PrintItemDescription();
